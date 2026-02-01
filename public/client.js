@@ -71,7 +71,7 @@ async function fetchWeather(city) {
 
 // Event listener cho button
 searchBtn.addEventListener('click', () => {
-    const city = cityInput.ariaValueMax.trim();
+    const city = cityInput.value.trim();
 
     if (!city) {
         showError('Vui lòng nhập tên thành phố.');
