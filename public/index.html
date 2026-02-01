@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather APP - Dự báo thời tiết</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Weather APP - Dự báo thời tiết</h1>
+      <p class="subtitle">Nhập tên thành phố để xem dự báo thời tiết.</p>
+
+      <!-- Form nhập tên thành phố -->
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Nhập tên thành phố (VD: Hanoi, Saigon, Danang)"
+          autocomplete="off"
+        />
+        <button id="searchBtn">Tìm</button>
+      </div>
+
+      <!-- Loading spinner -->
+      <div id="loading" class="loading" style="display: none">
+        <div class="spinner"></div>
+        <p>Đang tải dữ liệu...</p>
+      </div>
+
+      <!-- Khu vực hiển thị kết quả dự báo thời tiết -->
+      <div id="weatherResult" class="weather-result" style="display: none">
+        <h2 id="cityName"></h2>
+        <div class="weather-info">
+          <div class="weather-item">
+            <span class="label">Nhiệt độ:</span>
+            <span class="value" id="temperature"></span>
+          </div>
+
+          <div class="weather-item">
+            <span class="label">Mô tả:</span>
+            <span class="value" id="description"></span>
+          </div>
+
+          <div class="weather-item">
+            <span class="label">Độ ẩm:</span>
+            <span class="value" id="humidity"></span>
+          </div>
+
+          <div class="weather-item">
+            <span class="label">Tốc độ gió:</span>
+            <span class="value" id="windSpeed"></span>
+          </div>
+        </div>
+      </div>
+      <div id="errorMessage" class="error-message" style="display: none"></div>
+    </div>
+
+    <!-- Nhúng file JavaScript -->
+    <script src="client.js"></script>
+  </body>
+</html>
