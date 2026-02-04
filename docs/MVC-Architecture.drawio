@@ -1,0 +1,134 @@
+<mxfile host="65bd71144e">
+    <diagram id="MVC-Weather-App" name="MVC Architecture">
+        <mxGraphModel dx="1276" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Weather APP - MVC Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="450" y="30" width="500" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="CLIENT (Browser)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="360" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="VIEW - public/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=12;" parent="10" vertex="1">
+                    <mxGeometry y="40" width="360" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="📄 index.html - Giao diện HTML" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="10" vertex="1">
+                    <mxGeometry y="70" width="360" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="🎨 style.css - CSS Styling" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="10" vertex="1">
+                    <mxGeometry y="98" width="360" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="⚙️ client.js - JavaScript Logic" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="10" vertex="1">
+                    <mxGeometry y="126" width="360" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="10" vertex="1">
+                    <mxGeometry y="154" width="360" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="• Form nhập tên thành phố&#xa;• Hiển thị kết quả thời tiết&#xa;• Gửi HTTP Request đến Server" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="10" vertex="1">
+                    <mxGeometry y="164" width="360" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="SERVER (Node.js + Express)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="120" width="520" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="ROUTES - src/routes/weatherRoutes.ts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="20" vertex="1">
+                    <mxGeometry y="40" width="520" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="GET /weather?city=Hanoi" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" parent="21" vertex="1">
+                    <mxGeometry y="35" width="520" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="• Định nghĩa API endpoints&#xa;• Forward request đến Controller" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="21" vertex="1">
+                    <mxGeometry y="63" width="520" height="37" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="CONTROLLER - src/controllers/weatherController.ts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" parent="20" vertex="1">
+                    <mxGeometry y="140" width="520" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="getWeather(req, res)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" parent="30" vertex="1">
+                    <mxGeometry y="35" width="520" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="• Validate city parameter&#xa;• Kiểm tra WEATHER_MODE (mock/api)&#xa;• Gọi Model để lấy data&#xa;• Trả JSON response về Client" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="30" vertex="1">
+                    <mxGeometry y="63" width="520" height="77" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="MODEL - src/models/weatherModel.ts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="20" vertex="1">
+                    <mxGeometry y="280" width="520" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Interface WeatherData + Functions" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" parent="40" vertex="1">
+                    <mxGeometry y="35" width="520" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="• getWeatherFromMock(city)&#xa;• getWeatherFromAPI(city)&#xa;• getAvailableCities()&#xa;• Import mockData từ data layer&#xa;• Gọi OpenWeatherMap API (nếu mode=api)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="40" vertex="1">
+                    <mxGeometry y="63" width="520" height="77" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="DATA - src/data/mockData.ts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="20" vertex="1">
+                    <mxGeometry y="420" width="520" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="mockWeatherData: Record&lt;string, WeatherData&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" parent="50" vertex="1">
+                    <mxGeometry y="35" width="520" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="• 18 thành phố: Hanoi, Saigon, Danang...&#xa;• Dữ liệu Mock: temperature, description, humidity...&#xa;• Dùng khi WEATHER_MODE=mock" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="50" vertex="1">
+                    <mxGeometry y="63" width="520" height="57" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="OpenWeatherMap API" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="450" width="360" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="api.openweathermap.org" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" parent="60" vertex="1">
+                    <mxGeometry y="35" width="360" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="• Dữ liệu thời tiết thực tế&#xa;• Hàng ngàn thành phố toàn cầu&#xa;• Dùng khi WEATHER_MODE=api" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" parent="60" vertex="1">
+                    <mxGeometry y="63" width="360" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#0066CC;entryX=-0.004;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="13" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="670" y="203" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="101" value="HTTP Request&#xa;GET /weather?city=Hanoi" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0066CC;fontStyle=1" parent="100" vertex="1" connectable="0">
+                    <mxGeometry y="1" relative="1" as="geometry">
+                        <mxPoint x="-1" y="-32" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="102" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#009900;dashed=1;" parent="1" source="31" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="460" y="280" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="103" value="JSON Response&#xa;{city, temperature...}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#009900;fontStyle=1" parent="102" vertex="1" connectable="0">
+                    <mxGeometry x="0.1" relative="1" as="geometry">
+                        <mxPoint x="-10" y="19" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="104" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#CC00CC;" parent="1" source="21" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#CC0000;" parent="1" source="30" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF8C00;" parent="1" source="40" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=block;endSize=8;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#666666;dashed=1;" parent="1" source="41" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="API Call (mode=api)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#666666;" parent="107" vertex="1" connectable="0">
+                    <mxGeometry x="0.1" relative="1" as="geometry">
+                        <mxPoint y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="110" value="LUỒNG DỮ LIỆU" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="600" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="1. Client gửi request → Routes" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="110" vertex="1">
+                    <mxGeometry y="30" width="320" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="2. Routes → Controller xử lý" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="110" vertex="1">
+                    <mxGeometry y="50" width="320" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="3. Controller → Model → Data/API" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="110" vertex="1">
+                    <mxGeometry y="70" width="320" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="4. Response trả về Client" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontColor=#009900;" parent="110" vertex="1">
+                    <mxGeometry y="90" width="320" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
